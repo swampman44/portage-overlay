@@ -8,7 +8,7 @@ SRC_URI="https://github.com/philburk/${PN}/releases/tag/${PV}"
 DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND="dev-build/cmake"
-
+SLOT="0"
 src_compile() {
 	      cmake .
 	      emake
