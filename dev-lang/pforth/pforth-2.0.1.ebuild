@@ -9,10 +9,15 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND="dev-build/cmake"
 SLOT="0"
-src_compile() {
-	      cmake .
-	      emake
+
+src_unpack() {
+	unpack ${A}
 }
+
+src_compile() {
+	cmake-utils_src_compile
+}
+
 src_install() {
-	      emake DESTDIR="${D}" install || die "make install failed"
+	cmake-utils_src_install
 }
